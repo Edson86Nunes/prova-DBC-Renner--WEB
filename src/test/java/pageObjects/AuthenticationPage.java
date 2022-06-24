@@ -16,11 +16,34 @@ public class AuthenticationPage {
     @FindBy(id = "SubmitCreate")
     private WebElement botaoCreateAnAccount;
 
-    public void preencherEmailCreate(String emailCreate){
+    @FindBy(id = "email")
+    private WebElement emailLogin;
+
+    @FindBy(id = "passwd")
+    private WebElement senhaLogin;
+
+    @FindBy(id = "SubmitLogin")
+    private WebElement btnLogin;
+
+    public void clicaBtnLogin() {
+        btnLogin.click();
+    }
+
+    public void preencherLogin(String email) {
+        emailLogin.sendKeys(email);
+    }
+
+    public void preencherSenha(String passwd) {
+        senhaLogin.sendKeys(passwd);
+    }
+
+    public void preencherEmailCreate(String emailCreate) {
         campoEmailCreate.sendKeys(emailCreate);
     }
 
-    public void clicaCreateAnAccount(){ botaoCreateAnAccount.click();
+    public void clicaCreateAnAccount() {
+        botaoCreateAnAccount.click();
     }
-
 }
+
+

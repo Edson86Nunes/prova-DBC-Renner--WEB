@@ -2,7 +2,8 @@
 #enconding: UTF-8
 
 Funcionalidade: Cadastra novo usário
-@cadastro
+  @test
+  @cadastro
   Cenario: Realiza cadastro de novo usuario
     Dado que eu esteja na pagina de autenticacao do site
     Quando insiro um email valido

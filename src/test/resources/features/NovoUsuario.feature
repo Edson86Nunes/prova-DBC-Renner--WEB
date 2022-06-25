@@ -1,7 +1,7 @@
 #language: pt
 #enconding: UTF-8
 
-Funcionalidade: Cadastra novo usário
+Funcionalidade: Cadastra novo usuario
   @test
   @cadastro
   Cenario: Realiza cadastro de novo usuario
@@ -11,4 +11,7 @@ Funcionalidade: Cadastra novo usário
     E preencho os dados obrigatórios
       | campoPrimeiroNome | campoSegundoNome | campoSenha | campoDia | campoMeses | campoAno | campoEndereco | campoCidade | campoestado | campoCEP | campoPais     |telefoneCelular|
       | Teste             | Silva            | 12345      | 29       | June       | 1987     | Rua Testere   | Floripa     | Alabama     | 00000    | United States |5547999999999  |
-    Entao clico em Register e sou direcionado para a pagina da minha conta
+    Entao sou direcionado para a pagina da minha conta
+
+
+    // arrumar xpath

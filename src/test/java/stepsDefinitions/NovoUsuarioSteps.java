@@ -54,7 +54,7 @@ public class NovoUsuarioSteps {
 
     }
 
-    @Entao("clico em Register e sou direcionado para a pagina da minha conta")
+    @Entao("sou direcionado para a pagina da minha conta")
     public void clicoEmRegisterESouDirecionadoParaAPaginaDaMinhaConta() {
         Na(FormPage.class).clicaBtnRegister();
         //String campoUsuarioLogado = Na(FormPage.class).preenchePrimeiroNome();

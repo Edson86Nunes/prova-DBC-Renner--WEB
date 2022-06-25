@@ -21,14 +21,47 @@ public class MyAccountPage {
     @FindBy(id = "color_37")
     private WebElement corVerde;
 
+    @FindBy(id = "color_2")
+    private WebElement corAzul;
+
+    @FindBy(id = "color_7")
+    private WebElement corPreto;
+
+
     @FindBy(id = "group_1")
     private WebElement selecionaTamanho;
 
-    @FindBy(name = "submit")
+    @FindBy(xpath = "//*[@id=\"add_to_cart\"]/button")
     private WebElement btnAdicionaCarrinho;
 
-    @FindBy(xpath = "//*[@id=\'layer_cart\']/div[1]/div[1]/h2/text()")
-    private WebElement msgAddCarrinho;
+    @FindBy(xpath = "//*/div/div/div[3]/div/a")
+    private WebElement abreCarrinho;
+
+    @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li/div/div[2]/h5/a")
+    private WebElement produtoBlouse;
+
+    @FindBy(id = "quantity_wanted")
+    private WebElement quantidade;
+
+    @FindBy(xpath = "//*[@id='layer_cart']/div[1]/div[2]/div[4]/span")
+    private WebElement btnContinueShopping;
+
+    public void continuaCompras() {
+        btnContinueShopping.click();
+    }
+
+    public void selecionaQuantidade(String qtd) {
+        quantidade.clear();
+        quantidade.sendKeys(qtd);
+    }
+
+    public void clicaEmBlouse() {
+        produtoBlouse.click();
+    }
+
+    public void abreCarrinho() {
+        abreCarrinho.click();
+    }
 
     public void adicionaCarrinho() {
         btnAdicionaCarrinho.click();
@@ -40,6 +73,12 @@ public class MyAccountPage {
 
     public void selecionaCorVerde() {
         corVerde.click();
+    }
+    public void selecionaCorAzul() {
+        corAzul.click();
+    }
+    public void selecionaCorPreto() {
+        corPreto.click();
     }
 
     public void preencheProduto(String produto) {

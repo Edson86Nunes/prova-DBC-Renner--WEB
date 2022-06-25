@@ -1,21 +1,20 @@
 # language: pt
 Funcionalidade: realiza uma compra de tres itens com usuário já cadastrado
 
-
   @test
   @compra
-  Cenario: Realiza uma compra no http://automationpractice.com/
+  Cenario: Realiza a escolha de itens para compra
     Dado que eu esteja logado com o usuario "jeff.marks@yahoo.com" senha "12345"
-    Quando pesquiso o produto "Printed Chiffon Dress"
-    E escolho a cor "verde"
-    E escolho o tamanho "M"
-    E adiciono o produto no carrinho
-    Entao vejo a mensagem de sucesso: "Product successfully added to your shopping cart"
+    Quando adiciono o produto "Printed Chiffon Dress" na cor "verde" e tamanho "M"
+    E adiciono o produto "Faded Short Sleeve T-shirts" na cor "azul" e tamanho "S"
+    E adiciono o produto "Blouse" na cor "preto" e tamanho "S"
+    E seleciono a quantidade para  "2"
+    E que tenho produtos no meu carrinho
 
 
-#
-#  - Printed Chiffon Dress na cor verde e tamanho "M"
-#  - Faded Short Sleeve T-shirts na cor azul
-#  - Blouse na quantidade 2
-#  - Printed Dress
+  #Cenario: Finaliza a compra
+
+
+
+
 

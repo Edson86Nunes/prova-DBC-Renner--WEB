@@ -1,6 +1,5 @@
 package pageObjects;
 
-import org.openqa.selenium.WebDriver;
 import org.hamcrest.core.StringContains;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -11,12 +10,8 @@ public class AuthenticationPage {
     @FindBy(xpath = "//*[@id='create-account_form']/h3")  //para validar se esta na pagina de criação
     private WebElement createAnAccount;
 
-    @FindBy(xpath = "//*[@id='center_column']/h1")
-    private WebElement pgAutenticacao;
-
     @FindBy(xpath = "//*[@id='account-creation_form']/div[1]/h3")
     private WebElement pgNovaConta;
-
 
     @FindBy(id = "email_create")
     private WebElement campoEmailCreate;
@@ -36,13 +31,8 @@ public class AuthenticationPage {
     @FindBy(xpath = "//*[@id='center_column']/p")
     private WebElement minhaConta;
 
-    public void validaPgAutenticacao(){
-        String pgAutentica;
-        pgAutentica = pgAutenticacao.getText();
-        Assert.assertThat(pgAutentica, StringContains.containsString("AUTHENTICATION"));
-    }
 
-    public void validaPgNovaConta(){
+    public void validaPgNovaConta()  {
         String pgContanova;
         pgContanova = pgNovaConta.getText();
         Assert.assertThat(pgContanova, StringContains.containsString("YOUR PERSONAL INFORMATION"));
@@ -70,8 +60,9 @@ public class AuthenticationPage {
         campoEmailCreate.sendKeys(emailCreate);
     }
 
-    public void clicaCreateAnAccount() {
+    public void clicaCreateAnAccount() throws InterruptedException {
         botaoCreateAnAccount.click();
+        Thread.sleep(2000);
     }
 }
 

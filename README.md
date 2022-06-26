@@ -9,9 +9,9 @@ Projeto de automação de testes WEB para prova Renner.
  - Maven instalado e configurado no path da aplicação.
  - Clonar o projeto para sua máquina: git clone https://github.com/Edson86Nunes/prova-DBC-Renner--WEB.git
  - Abrir na sua IDE de preferencia
- - mvn clean install
+ - mvn test
 
-1.2. Evidência:
+
 
 
 ![evidenciaWeb](https://user-images.githubusercontent.com/51981001/175795023-8499fd26-2926-404b-a675-3134c4815bd4.PNG)

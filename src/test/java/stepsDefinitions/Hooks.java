@@ -11,6 +11,6 @@ public class Hooks {
     public void tearDown(Scenario scenario) throws InterruptedException {
         Thread.sleep(1000);
         screenshot(scenario);
-        //driver.quit();
+        driver.quit();
     }
 }

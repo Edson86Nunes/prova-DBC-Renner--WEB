@@ -11,11 +11,10 @@ Projeto de automação de testes WEB para prova Renner.
  - Abrir na sua IDE de preferencia
  - mvn test
 
- Obs: o relatório pode ser visto em: prova_renner_web\target\cucumber-report\index.html
- 
 
 
 
+![evidenciaWeb](https://user-images.githubusercontent.com/51981001/175795023-8499fd26-2926-404b-a675-3134c4815bd4.PNG)
 
 
 

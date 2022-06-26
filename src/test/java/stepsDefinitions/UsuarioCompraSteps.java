@@ -4,13 +4,9 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
-import org.hamcrest.core.StringContains;
-import org.junit.Assert;
 import pageObjects.AuthenticationPage;
 import pageObjects.MyAccountPage;
 import pageObjects.ShoppingCartPage;
-
-import static org.junit.Assert.assertThat;
 import static utils.Configs.*;
 
 public class UsuarioCompraSteps {
@@ -45,7 +41,7 @@ public class UsuarioCompraSteps {
     }
     
     @E("seleciono a quantidade para  {string}")
-    public void selecionoAQuantidadePara(String qtd) {
+    public void selecionoAQuantidadePara(String qtd)  {
         Na(MyAccountPage.class).selecionaQuantidade(qtd);
     }
 
@@ -56,7 +52,7 @@ public class UsuarioCompraSteps {
         Na(ShoppingCartPage.class).validarProdutos();
     }
 
-    @E("sigo para a pagina de endereço")
+    @E("sigo para a pagina de endereco")
     public void sigoParaAPaginaDeEndereco(){
         Na(ShoppingCartPage.class).clicaProsseguirPgResumo();
         Na(ShoppingCartPage.class).validaPgEndereco();

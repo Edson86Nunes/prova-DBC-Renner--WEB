@@ -8,7 +8,7 @@ Funcionalidade: Cadastra novo usuario
     Dado que eu esteja na pagina de autenticacao do site
     Quando insiro um email valido
     E clico em Create an accont  sou direcionado para pagina de cadastro de usuario
-    E preencho os dados obrigatórios
+    E preencho os dados obrigatorios
       | campoPrimeiroNome | campoSegundoNome | campoSenha | campoDia | campoMeses | campoAno | campoEndereco | campoCidade | campoestado | campoCEP | campoPais     |telefoneCelular|
       | Teste             | Silva            | 12345      | 29       | June       | 1987     | Rua Testere   | Floripa     | Alabama     | 00000    | United States |5547999999999  |
     Entao sou direcionado para a pagina da minha conta

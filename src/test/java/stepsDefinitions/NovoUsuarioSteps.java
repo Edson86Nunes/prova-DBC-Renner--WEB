@@ -15,9 +15,7 @@ public class NovoUsuarioSteps {
 
     @Dado("que eu esteja na pagina de autenticacao do site")
     public void queEuEstejaNaPaginaDeAutenticacaoDoSite() {
-
         abrirSistema();
-        Na(AuthenticationPage.class).validaPgAutenticacao();
     }
 
     @Quando("insiro um email valido")
@@ -27,14 +25,14 @@ public class NovoUsuarioSteps {
     }
 
     @E("clico em Create an accont  sou direcionado para pagina de cadastro de usuario")
-    public void clicoEmCreateAnAccontSouDirecionadoParaPaginaDeCadastroDeUsuario() {
+    public void clicoEmCreateAnAccontSouDirecionadoParaPaginaDeCadastroDeUsuario() throws InterruptedException {
         Na(AuthenticationPage.class).clicaCreateAnAccount();
-        Na(AuthenticationPage.class).validaPgAutenticacao();
     }
 
-    @E("preencho os dados obrigatórios")
-    public void preenchoOsDadosObrigatorios(List<String> form) {
-        Na(AuthenticationPage.class).validaPgNovaConta();
+    @E("preencho os dados obrigatorios")
+    public void preenchoOsDadosObrigatorios(List<String> form)  {
+        Na(FormPage.class).clicaPrimeiroNome();
+
         int percorreLista = form.size() /2; //para começar a preencher pela segunda linha da tabela no NovoUsuario.feature  :)
 
         Na(FormPage.class).preenchePrimeiroNome(form.get(percorreLista));

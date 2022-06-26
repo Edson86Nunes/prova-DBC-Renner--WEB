@@ -2,7 +2,6 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import static utils.Configs.*;
 
 public class FormPage {
 
@@ -24,6 +23,9 @@ public class FormPage {
     @FindBy(id = "years")
     private WebElement campoAno;
 
+    public void clicaPrimeiroNome(){
+        campoPrimeiroNome.click();
+    }
     public void preenchePrimeiroNome(String customer_firstname ){
         campoPrimeiroNome.sendKeys(customer_firstname);
     }

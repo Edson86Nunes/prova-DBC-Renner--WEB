@@ -3,7 +3,6 @@ package utils;
 import java.util.concurrent.TimeUnit;
 import com.github.javafaker.Faker;
 import io.cucumber.core.api.Scenario;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;

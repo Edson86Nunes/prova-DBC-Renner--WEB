@@ -11,19 +11,10 @@ Projeto de automação de testes WEB para prova Renner.
  - Abrir na sua IDE de preferencia
  - mvn clean install
 
-1.2. Driver(s) do navegador
-
-   Para abrir o navegador, é necessário que na máquina tenha o driver atualizado.
-
-   **Verificar a versão instalada dos navegadores e baixar uma compatível**
-
-   - [chromedriver](https://chromedriver.chromium.org/downloads)
-   - [geckodriver](https://github.com/mozilla/geckodriver/releases)
-
-   Mover o arquivo.exe descompactado para uma pasta que já esteja em $PATH, ou criar uma e adicionar ao $PATH.
+1.2. Evidência:
 
 
-
+![evidenciaWeb](https://user-images.githubusercontent.com/51981001/175795023-8499fd26-2926-404b-a675-3134c4815bd4.PNG)
 
 
 

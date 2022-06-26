@@ -10,9 +10,12 @@ Funcionalidade: realiza uma compra de tres itens com usuário já cadastrado
     E adiciono o produto "Blouse" na cor "preto" e tamanho "S"
     E seleciono a quantidade para  "2"
     E que tenho produtos no meu carrinho
+    E sigo para a pagina de endereço
+    E siga para a pagina de envio
+    Entao confirmo os dados de pagamento e visualizo a mensagem "Your order on My Store is complete."
 
 
-  #Cenario: Finaliza a compra
+
 
 
 

@@ -13,5 +13,3 @@ Funcionalidade: Cadastra novo usuario
       | Teste             | Silva            | 12345      | 29       | June       | 1987     | Rua Testere   | Floripa     | Alabama     | 00000    | United States |5547999999999  |
     Entao sou direcionado para a pagina da minha conta
 
-
-    // arrumar xpath

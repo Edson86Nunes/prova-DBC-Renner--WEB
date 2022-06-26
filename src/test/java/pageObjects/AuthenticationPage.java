@@ -1,6 +1,8 @@
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
+import org.hamcrest.core.StringContains;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -8,6 +10,12 @@ public class AuthenticationPage {
 
     @FindBy(xpath = "//*[@id='create-account_form']/h3")  //para validar se esta na pagina de criação
     private WebElement createAnAccount;
+
+    @FindBy(xpath = "//*[@id='center_column']/h1")
+    private WebElement pgAutenticacao;
+
+    @FindBy(xpath = "//*[@id='account-creation_form']/div[1]/h3")
+    private WebElement pgNovaConta;
 
 
     @FindBy(id = "email_create")
@@ -24,6 +32,27 @@ public class AuthenticationPage {
 
     @FindBy(id = "SubmitLogin")
     private WebElement btnLogin;
+
+    @FindBy(xpath = "//*[@id='center_column']/p")
+    private WebElement minhaConta;
+
+    public void validaPgAutenticacao(){
+        String pgAutentica;
+        pgAutentica = pgAutenticacao.getText();
+        Assert.assertThat(pgAutentica, StringContains.containsString("AUTHENTICATION"));
+    }
+
+    public void validaPgNovaConta(){
+        String pgContanova;
+        pgContanova = pgNovaConta.getText();
+        Assert.assertThat(pgContanova, StringContains.containsString("YOUR PERSONAL INFORMATION"));
+    }
+
+    public void validaPgMinhaConta() {
+        String pgMinhaConta;
+        pgMinhaConta = minhaConta.getText();
+        Assert.assertThat(pgMinhaConta, StringContains.containsString("Welcome to your account. Here you can manage all of your personal information and orders."));
+    }
 
     public void clicaBtnLogin() {
         btnLogin.click();

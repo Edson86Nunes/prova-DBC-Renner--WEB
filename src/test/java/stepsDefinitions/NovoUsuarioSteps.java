@@ -7,10 +7,7 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import pageObjects.AuthenticationPage;
 import pageObjects.FormPage;
-import pageObjects.MyAccountPage;
-
 import java.util.List;
-
 import static utils.Configs.*;
 
 
@@ -18,24 +15,26 @@ public class NovoUsuarioSteps {
 
     @Dado("que eu esteja na pagina de autenticacao do site")
     public void queEuEstejaNaPaginaDeAutenticacaoDoSite() {
-        abrirSistema();
-    }
 
+        abrirSistema();
+        Na(AuthenticationPage.class).validaPgAutenticacao();
+    }
 
     @Quando("insiro um email valido")
     public void insiroUmEmailValido() {
         String email = gerarEmail();
-        //Na(AuthenticationPage.class).clicaEmailCreate();
         Na(AuthenticationPage.class).preencherEmailCreate(email);
     }
 
     @E("clico em Create an accont  sou direcionado para pagina de cadastro de usuario")
     public void clicoEmCreateAnAccontSouDirecionadoParaPaginaDeCadastroDeUsuario() {
         Na(AuthenticationPage.class).clicaCreateAnAccount();
+        Na(AuthenticationPage.class).validaPgAutenticacao();
     }
 
     @E("preencho os dados obrigatórios")
-    public void preenchoOsDadosObrigatórios(List<String> form) {
+    public void preenchoOsDadosObrigatorios(List<String> form) {
+        Na(AuthenticationPage.class).validaPgNovaConta();
         int percorreLista = form.size() /2; //para começar a preencher pela segunda linha da tabela no NovoUsuario.feature  :)
 
         Na(FormPage.class).preenchePrimeiroNome(form.get(percorreLista));
@@ -57,7 +56,6 @@ public class NovoUsuarioSteps {
     @Entao("sou direcionado para a pagina da minha conta")
     public void clicoEmRegisterESouDirecionadoParaAPaginaDaMinhaConta() {
         Na(FormPage.class).clicaBtnRegister();
-        //String campoUsuarioLogado = Na(FormPage.class).preenchePrimeiroNome();
-
+        Na(AuthenticationPage.class).validaPgMinhaConta();
     }
 }

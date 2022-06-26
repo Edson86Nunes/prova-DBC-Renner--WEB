@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class MyAccountPage {
 
-    @FindBy(xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a/span")
+    @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")
     private WebElement campoUsuarioLogado;
 
     @FindBy(xpath = "//*[@id='center_column']/div/div[1]/ul/li[4]/a/span")
@@ -18,7 +18,7 @@ public class MyAccountPage {
     private WebElement btnPesquisa;
 
     //*[@title='Printed Chiffon Dress'][@class='product-name']
-    @FindBy(id = "color_37")
+    @FindBy(xpath = "//*[@id='color_37']")
     private WebElement corVerde;
 
     @FindBy(id = "color_2")
@@ -31,13 +31,13 @@ public class MyAccountPage {
     @FindBy(id = "group_1")
     private WebElement selecionaTamanho;
 
-    @FindBy(xpath = "//*[@id=\"add_to_cart\"]/button")
+    @FindBy(xpath = "//*[@id='add_to_cart']/button")
     private WebElement btnAdicionaCarrinho;
 
     @FindBy(xpath = "//*/div/div/div[3]/div/a")
     private WebElement abreCarrinho;
 
-    @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li/div/div[2]/h5/a")
+    @FindBy(xpath = "//*[@id='center_column']/ul/li/div/div[2]/h5/a")
     private WebElement produtoBlouse;
 
     @FindBy(id = "quantity_wanted")
@@ -74,9 +74,11 @@ public class MyAccountPage {
     public void selecionaCorVerde() {
         corVerde.click();
     }
+
     public void selecionaCorAzul() {
         corAzul.click();
     }
+
     public void selecionaCorPreto() {
         corPreto.click();
     }
@@ -88,7 +90,6 @@ public class MyAccountPage {
     public void pesquisaProduto() {
         btnPesquisa.click();
     }
-
 
 
 }
